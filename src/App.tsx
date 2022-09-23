@@ -4,11 +4,14 @@ import './App.css';
 import Home from './components/Home'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import {Navbar, Nav } from 'react-bootstrap'
+import ThemeProvider from 'react-bootstrap/ThemeProvider'
 import About from './components/About'
 import CloudFormationToDataDog from "./components/CloudFormationToDataDog"
 
+
 function App() {
   return (
+    <ThemeProvider breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md']} minBreakpoint="xxs">
     <div className="App">
       <header className="App-header">
         Developer Tools
@@ -30,6 +33,7 @@ function App() {
       </BrowserRouter>
       <footer className="App-footer">Created with Create-React-App</footer>
     </div>
+    </ThemeProvider>
   );
 }
 
